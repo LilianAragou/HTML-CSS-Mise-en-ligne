@@ -1,0 +1,169 @@
+/* Style général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #fff; /* Texte blanc par défaut */
+    line-height: 1.6;
+}
+
+body {
+    background-color: #000; /* Fond noir */
+    display: flex;
+}
+
+/* Bande de menu latérale */
+.menu {
+    width: 250px;
+    background-color: #1a1a1a; /* Fond gris foncé */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-left: 20px;
+    height: 100vh; /* Hauteur pleine page */
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.menu a:hover {
+    color: #ffcc00; /* Jaune au survol */
+}
+
+.nom_du_site {
+    font-size: 1.8em;
+}
+
+/* Zone principale (à droite du menu) */
+.zone_principale {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 20px;
+    width: calc(100% - 220px); /* La zone principale prend toute la largeur sauf celle du menu */
+}
+
+/* Noms des cartes alignés horizontalement */
+.nom_cartes {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.nom_cartes p {
+    font-size: 2em;
+    color: #fff; /* Texte des noms en blanc */
+    margin: 0 20px;
+    text-align: center;
+}
+
+/* Cartes alignées horizontalement */
+.cartes_section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cartes {
+    display: flex;
+    justify-content: left;
+    gap: 100px;
+    max-width: 800px;
+}
+
+.cartes img {
+    width: 170px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Ombre blanche douce */
+}
+
+
+/* Description de la collection */
+.description_collection p {
+    max-width: 800px;
+    font-size: 1.4em;
+    color: #fff; /* Blanc */
+    text-align: left;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.texte_introduction p {
+    max-width: 800px;
+    font-size: 1.4em;
+    color: #fff; /* Blanc */
+    text-align: left;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+/* Redimensionner les images de logos */
+.big_logo img {
+    width: 300px;  /* Choisis la largeur que tu souhaites pour tes logos */
+    height: auto;  /* Garder le ratio d'aspect des logos */
+    display: block;  /* Éviter tout espacement indésirable */
+    margin: 0 auto;  /* Centrer le logo dans son conteneur */
+}
+
+/* Redimensionner les images de logos */
+.logo img {
+    width: 250px;  /* Choisis la largeur que tu souhaites pour tes logos */
+    height: auto;  /* Garder le ratio d'aspect des logos */
+    display: block;  /* Éviter tout espacement indésirable */
+    margin: 0 auto;  /* Centrer le logo dans son conteneur */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    /* Menu vertical sur petits écrans */
+    .menu {
+        flex-direction: row;
+        justify-content: left;
+        height: auto;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .menu a {
+        font-size: 1.2em;
+        margin: 0 10px;
+    }
+
+    /* Zone principale */
+    .zone_principale {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .nom_cartes p {
+        font-size: 1.5em;
+    }
+
+    .cartes {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .cartes img {
+        margin-bottom: 15px;
+    }
+
+    .description_collection p {
+        font-size: 1.2em;
+    }
+}
